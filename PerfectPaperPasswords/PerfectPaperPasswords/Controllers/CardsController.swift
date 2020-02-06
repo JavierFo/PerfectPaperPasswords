@@ -8,15 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CardsController : UIViewController {
 
     let number : UInt128 = 333
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         print(number.bitWidth)
-        
     }
 
 

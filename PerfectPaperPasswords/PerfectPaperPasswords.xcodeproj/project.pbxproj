@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		10377D6623EA321500217D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10377D6523EA321500217D38 /* AppDelegate.swift */; };
 		10377D6823EA321500217D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10377D6723EA321500217D38 /* SceneDelegate.swift */; };
-		10377D6A23EA321500217D38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10377D6923EA321500217D38 /* ViewController.swift */; };
+		10377D6A23EA321500217D38 /* CardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10377D6923EA321500217D38 /* CardsController.swift */; };
 		10377D6D23EA321500217D38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10377D6B23EA321500217D38 /* Main.storyboard */; };
 		10377D6F23EA321700217D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10377D6E23EA321700217D38 /* Assets.xcassets */; };
 		10377D7223EA321700217D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10377D7023EA321700217D38 /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 		10377D6223EA321500217D38 /* PerfectPaperPasswords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectPaperPasswords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10377D6523EA321500217D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10377D6723EA321500217D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		10377D6923EA321500217D38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		10377D6923EA321500217D38 /* CardsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsController.swift; sourceTree = "<group>"; };
 		10377D6C23EA321500217D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10377D6E23EA321700217D38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10377D7123EA321700217D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,16 +58,48 @@
 		10377D6423EA321500217D38 /* PerfectPaperPasswords */ = {
 			isa = PBXGroup;
 			children = (
-				10377D7A23EA365500217D38 /* UInt128.swift */,
+				10DD1C0E23EBDE240086C53E /* Utils */,
+				10DD1C0D23EBDE0E0086C53E /* Views */,
+				10DD1C0C23EBDE0C0086C53E /* Controllers */,
+				10DD1C0B23EBDE070086C53E /* Models */,
 				10377D6523EA321500217D38 /* AppDelegate.swift */,
 				10377D6723EA321500217D38 /* SceneDelegate.swift */,
-				10377D6923EA321500217D38 /* ViewController.swift */,
-				10377D6B23EA321500217D38 /* Main.storyboard */,
 				10377D6E23EA321700217D38 /* Assets.xcassets */,
-				10377D7023EA321700217D38 /* LaunchScreen.storyboard */,
 				10377D7323EA321700217D38 /* Info.plist */,
 			);
 			path = PerfectPaperPasswords;
+			sourceTree = "<group>";
+		};
+		10DD1C0B23EBDE070086C53E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		10DD1C0C23EBDE0C0086C53E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				10377D6923EA321500217D38 /* CardsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		10DD1C0D23EBDE0E0086C53E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				10377D6B23EA321500217D38 /* Main.storyboard */,
+				10377D7023EA321700217D38 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		10DD1C0E23EBDE240086C53E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				10377D7A23EA365500217D38 /* UInt128.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10377D6A23EA321500217D38 /* ViewController.swift in Sources */,
+				10377D6A23EA321500217D38 /* CardsController.swift in Sources */,
 				10377D6623EA321500217D38 /* AppDelegate.swift in Sources */,
 				10377D6823EA321500217D38 /* SceneDelegate.swift in Sources */,
 				10377D7B23EA365500217D38 /* UInt128.swift in Sources */,
