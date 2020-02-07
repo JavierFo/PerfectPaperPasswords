@@ -67,21 +67,6 @@ func getNumberOfCipheredCounter (_ counter: UInt128, using key: SymmetricKey) ->
     return password
 }
 
-func passwordsCollector(key: SymmetricKey) -> [String]{
-    
-    //var Cards : [String]
-    var column = [String]()
-    
-    for _ in 1 ... 10 {
-        
-        for _ in 1 ... 7{
-            let cell = getLettersForPassword(key: key)
-            column.append(cell)
-        }
-        
-    }
-    
-    return column
-}
+
 
 

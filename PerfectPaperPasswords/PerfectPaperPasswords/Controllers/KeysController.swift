@@ -11,14 +11,19 @@ import UIKit
 class KeysController: UIViewController {
     
     @IBOutlet weak var keylbl: UILabel!
+    @IBOutlet weak var passwordGeneratorBttn: UIButton!
+    
+    
     let key = generateKey()
-    let counter: UInt128 = 0
+//   private let dataModel = DataModel()
+//    var passwordArray : [String] = []
     
     override func viewDidLoad() {
+ 
         
         keylbl.text = stringKey(key)
-        let cipheredNumber = getNumberOfCipheredCounter(counter, using: key)
-        //print("cipheredNumber: \(cipheredNumber ?? 0)\n\n\n")
+//        dataModel.delegate = self
+//        dataModel.requestData(with: key)
     }
     
     @IBAction func newKeyBtn(_ sender: UIButton) {
@@ -27,12 +32,25 @@ class KeysController: UIViewController {
     }
     
     @IBAction func createCards(_ sender: UIButton) {
-        
-        let password = getLettersForPassword(key: key)
-        print("\nPassword: \(password)")
-        let passwordsArray = passwordsCollector(key: key)
-        print("\n\n\nPassword Array: \(passwordsArray)")
+       // performSegue(withIdentifier: "PasswordSegue", sender: passwordGeneratorBttn)
     }
-    
-    
 }
+
+//extension KeysController: DataModelDelegate{
+//
+//    func didRecieveDataUpdate(data: [String]) {
+//
+//        passwordArray = data
+//
+//    }
+//
+////    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+////        if segue.identifier ==  "PasswordSegue"{
+////            let passwordsWillBeSentto = segue.destination as! CardsController
+////            passwordsWillBeSentto.passwordsWillBePrinted = passwordArray
+////        }
+////    }
+//
+//}
+
+

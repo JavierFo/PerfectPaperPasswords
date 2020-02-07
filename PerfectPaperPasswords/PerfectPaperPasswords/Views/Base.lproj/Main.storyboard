@@ -40,8 +40,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Generate Cards"/>
                                 <connections>
-                                    <action selector="createCards:" destination="yJ3-Vi-pye" eventType="touchUpInside" id="Iqo-3O-4y7"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="bFl-h2-Qhg"/>
+                                    <action selector="createCards:" destination="yJ3-Vi-pye" eventType="touchUpInside" id="emG-fi-UVe"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="PasswordSegue" id="IeM-sk-ufN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSu-DI-BHc">
@@ -80,6 +80,7 @@
                     <navigationItem key="navigationItem" id="L4H-s6-fVY"/>
                     <connections>
                         <outlet property="keylbl" destination="CSu-DI-BHc" id="0pa-qV-i4b"/>
+                        <outlet property="passwordGeneratorBttn" destination="ffj-hn-Zl3" id="CeV-hg-hK1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Err-jJ-Vwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,7 +108,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PasswordViewCell" id="aEO-DX-6Jw" customClass="PasswordViewCell" customModule="PerfectPaperPasswords" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="73" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZyU-6u-oqk" customClass="LabelsCollectionViewCell" customModule="PerfectPaperPasswords" customModuleProvider="target">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZyU-6u-oqk">
                                             <rect key="frame" x="0.0" y="0.0" width="73" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>

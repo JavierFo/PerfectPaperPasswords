@@ -15,6 +15,7 @@
 		10377D6F23EA321700217D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10377D6E23EA321700217D38 /* Assets.xcassets */; };
 		10377D7223EA321700217D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10377D7023EA321700217D38 /* LaunchScreen.storyboard */; };
 		10377D7B23EA365500217D38 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10377D7A23EA365500217D38 /* UInt128.swift */; };
+		107C858F23EDE7DC00680878 /* PasswordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C858E23EDE7DC00680878 /* PasswordsModel.swift */; };
 		10DD1C1023EBF1D60086C53E /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1C0F23EBF1D50086C53E /* Crypto.swift */; };
 		10DD1C1223EBF8350086C53E /* KeysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1C1123EBF8350086C53E /* KeysController.swift */; };
 		10DD1C1423EBFF050086C53E /* PasswordsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1C1323EBFF050086C53E /* PasswordsGenerator.swift */; };
@@ -31,8 +32,9 @@
 		10377D7123EA321700217D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10377D7323EA321700217D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10377D7A23EA365500217D38 /* UInt128.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInt128.swift; sourceTree = "<group>"; };
+		107C858E23EDE7DC00680878 /* PasswordsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsModel.swift; sourceTree = "<group>"; };
 		10DD1C0F23EBF1D50086C53E /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
-		10DD1C1123EBF8350086C53E /* KeysController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysController.swift; sourceTree = "<group>"; };
+		10DD1C1123EBF8350086C53E /* KeysController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		10DD1C1323EBFF050086C53E /* PasswordsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 			children = (
 				10DD1C0F23EBF1D50086C53E /* Crypto.swift */,
 				10DD1C1323EBFF050086C53E /* PasswordsGenerator.swift */,
+				107C858E23EDE7DC00680878 /* PasswordsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				10377D6823EA321500217D38 /* SceneDelegate.swift in Sources */,
 				10DD1C1223EBF8350086C53E /* KeysController.swift in Sources */,
 				10DD1C1023EBF1D60086C53E /* Crypto.swift in Sources */,
+				107C858F23EDE7DC00680878 /* PasswordsModel.swift in Sources */,
 				10377D7B23EA365500217D38 /* UInt128.swift in Sources */,
 				10178F2523ED32DD0059AA0B /* PasswordViewCell.swift in Sources */,
 			);

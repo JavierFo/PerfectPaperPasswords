@@ -7,16 +7,30 @@
 //
 
 import UIKit
+import CryptoKit
 
 class CardsController : UIViewController {
 
     @IBOutlet weak var cardsCollection: UICollectionView!
-           
+    //var passwordsWillBePrinted : [String]!
+    
+    private let dataModel = DataModel()
+    let key = generateKey()
+    var passwordArray : [[String]]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dataModel.delegate = self
+        dataModel.requestData(with: key)
     }
+}
 
+extension CardsController: DataModelDelegate{
+    func didRecieveDataUpdate(data: [[String]]) {
+        passwordArray = data
+        print(passwordArray ?? 0)
+    }
+    
 }
 
 extension CardsController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -36,7 +50,7 @@ extension CardsController: UICollectionViewDelegate, UICollectionViewDataSource,
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 5
-        cell.update(with: "wololo")
+        cell.passwordLabel.text = passwordArray?[indexPath.section][indexPath.item]
         
         return cell
     }
@@ -53,6 +67,5 @@ extension CardsController: UICollectionViewDelegate, UICollectionViewDataSource,
         return 2.5
     }
 
-    
 }
 
