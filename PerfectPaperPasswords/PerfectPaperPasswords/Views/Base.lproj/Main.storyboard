@@ -32,22 +32,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffj-hn-Zl3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffj-hn-Zl3">
                                 <rect key="frame" x="107" y="398" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="cRr-e7-YaX"/>
                                 </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Generate Cards">
-                                            <attributes>
-                                                <font key="NSFont" metaFont="system" size="17"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Generate Cards"/>
                                 <connections>
+                                    <action selector="createCards:" destination="yJ3-Vi-pye" eventType="touchUpInside" id="Iqo-3O-4y7"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="bFl-h2-Qhg"/>
                                 </connections>
                             </button>
@@ -56,7 +49,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Sko-rn-OSP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -105,32 +98,37 @@
                                 <rect key="frame" x="20" y="88" width="374" height="720"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iaD-A2-fJn">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="73" height="72"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell_Identifier" id="aEO-DX-6Jw">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PasswordViewCell" id="aEO-DX-6Jw" customClass="PasswordViewCell" customModule="PerfectPaperPasswords" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="73" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZyU-6u-oqk">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZyU-6u-oqk" customClass="LabelsCollectionViewCell" customModule="PerfectPaperPasswords" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="73" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVW-Fh-Lwg">
-                                                    <rect key="frame" x="4" y="15" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123456" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juT-vq-1aH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="73" height="72"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="UVW-Fh-Lwg" firstAttribute="top" secondItem="ZyU-6u-oqk" secondAttribute="top" constant="15" id="DEc-2a-eIj"/>
-                                                <constraint firstItem="UVW-Fh-Lwg" firstAttribute="centerY" secondItem="ZyU-6u-oqk" secondAttribute="centerY" id="TPw-WH-YDb"/>
-                                                <constraint firstItem="UVW-Fh-Lwg" firstAttribute="centerX" secondItem="ZyU-6u-oqk" secondAttribute="centerX" id="uOb-Xv-3GZ"/>
+                                                <constraint firstItem="juT-vq-1aH" firstAttribute="top" secondItem="ZyU-6u-oqk" secondAttribute="top" id="0e2-Sr-d5N"/>
+                                                <constraint firstItem="juT-vq-1aH" firstAttribute="leading" secondItem="ZyU-6u-oqk" secondAttribute="leading" id="Ngr-lu-2Hs"/>
+                                                <constraint firstItem="juT-vq-1aH" firstAttribute="centerX" secondItem="ZyU-6u-oqk" secondAttribute="centerX" id="qra-wN-0bF"/>
+                                                <constraint firstItem="juT-vq-1aH" firstAttribute="centerY" secondItem="ZyU-6u-oqk" secondAttribute="centerY" id="xf2-ir-6Kh"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="73" height="72"/>
+                                        <connections>
+                                            <outlet property="passwordLabel" destination="juT-vq-1aH" id="Upq-w5-Ddz"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

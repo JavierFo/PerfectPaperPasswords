@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10178F2523ED32DD0059AA0B /* PasswordViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10178F2423ED32DD0059AA0B /* PasswordViewCell.swift */; };
 		10377D6623EA321500217D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10377D6523EA321500217D38 /* AppDelegate.swift */; };
 		10377D6823EA321500217D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10377D6723EA321500217D38 /* SceneDelegate.swift */; };
 		10377D6A23EA321500217D38 /* CardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10377D6923EA321500217D38 /* CardsController.swift */; };
@@ -16,9 +17,11 @@
 		10377D7B23EA365500217D38 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10377D7A23EA365500217D38 /* UInt128.swift */; };
 		10DD1C1023EBF1D60086C53E /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1C0F23EBF1D50086C53E /* Crypto.swift */; };
 		10DD1C1223EBF8350086C53E /* KeysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1C1123EBF8350086C53E /* KeysController.swift */; };
+		10DD1C1423EBFF050086C53E /* PasswordsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1C1323EBFF050086C53E /* PasswordsGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10178F2423ED32DD0059AA0B /* PasswordViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewCell.swift; sourceTree = "<group>"; };
 		10377D6223EA321500217D38 /* PerfectPaperPasswords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectPaperPasswords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10377D6523EA321500217D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10377D6723EA321500217D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		10377D7A23EA365500217D38 /* UInt128.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInt128.swift; sourceTree = "<group>"; };
 		10DD1C0F23EBF1D50086C53E /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		10DD1C1123EBF8350086C53E /* KeysController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysController.swift; sourceTree = "<group>"; };
+		10DD1C1323EBFF050086C53E /* PasswordsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				10DD1C0F23EBF1D50086C53E /* Crypto.swift */,
+				10DD1C1323EBFF050086C53E /* PasswordsGenerator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -87,6 +92,7 @@
 			children = (
 				10377D6923EA321500217D38 /* CardsController.swift */,
 				10DD1C1123EBF8350086C53E /* KeysController.swift */,
+				10178F2423ED32DD0059AA0B /* PasswordViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,12 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10DD1C1423EBFF050086C53E /* PasswordsGenerator.swift in Sources */,
 				10377D6A23EA321500217D38 /* CardsController.swift in Sources */,
 				10377D6623EA321500217D38 /* AppDelegate.swift in Sources */,
 				10377D6823EA321500217D38 /* SceneDelegate.swift in Sources */,
 				10DD1C1223EBF8350086C53E /* KeysController.swift in Sources */,
 				10DD1C1023EBF1D60086C53E /* Crypto.swift in Sources */,
 				10377D7B23EA365500217D38 /* UInt128.swift in Sources */,
+				10178F2523ED32DD0059AA0B /* PasswordViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

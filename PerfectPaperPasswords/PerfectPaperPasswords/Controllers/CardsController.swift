@@ -11,9 +11,10 @@ import UIKit
 class CardsController : UIViewController {
 
     @IBOutlet weak var cardsCollection: UICollectionView!
-       
+           
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 
 }
@@ -29,12 +30,13 @@ extension CardsController: UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_Identifier", for: indexPath as IndexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PasswordViewCell", for: indexPath) as? PasswordViewCell else { fatalError("Unable to dequeue Password View Cell")}
         
         cell.backgroundColor = UIColor.clear
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 5
+        cell.update(with: "wololo")
         
         return cell
     }
@@ -50,6 +52,7 @@ extension CardsController: UICollectionViewDelegate, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 2.5
     }
+
     
 }
 
