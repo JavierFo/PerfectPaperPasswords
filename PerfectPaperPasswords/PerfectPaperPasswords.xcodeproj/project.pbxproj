@@ -19,6 +19,8 @@
 		10DD1C1023EBF1D60086C53E /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1C0F23EBF1D50086C53E /* Crypto.swift */; };
 		10DD1C1223EBF8350086C53E /* KeysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1C1123EBF8350086C53E /* KeysController.swift */; };
 		10DD1C1423EBFF050086C53E /* PasswordsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1C1323EBFF050086C53E /* PasswordsGenerator.swift */; };
+		10E2C34523EE6918009D16D8 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E2C34323EE6918009D16D8 /* KeychainItemAccessibility.swift */; };
+		10E2C34623EE6918009D16D8 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E2C34423EE6918009D16D8 /* KeychainWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		10DD1C0F23EBF1D50086C53E /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		10DD1C1123EBF8350086C53E /* KeysController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		10DD1C1323EBFF050086C53E /* PasswordsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsGenerator.swift; sourceTree = "<group>"; };
+		10E2C34323EE6918009D16D8 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = "../../../../../Downloads/PaperPasswords:zippi/PPP-Crypto-Proyect/Utils/KeychainWrapper/KeychainItemAccessibility.swift"; sourceTree = "<group>"; };
+		10E2C34423EE6918009D16D8 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = "../../../../../Downloads/PaperPasswords:zippi/PPP-Crypto-Proyect/Utils/KeychainWrapper/KeychainWrapper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				10377D7A23EA365500217D38 /* UInt128.swift */,
+				10E2C34323EE6918009D16D8 /* KeychainItemAccessibility.swift */,
+				10E2C34423EE6918009D16D8 /* KeychainWrapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -191,6 +197,8 @@
 				10DD1C1423EBFF050086C53E /* PasswordsGenerator.swift in Sources */,
 				10377D6A23EA321500217D38 /* CardsController.swift in Sources */,
 				10377D6623EA321500217D38 /* AppDelegate.swift in Sources */,
+				10E2C34623EE6918009D16D8 /* KeychainWrapper.swift in Sources */,
+				10E2C34523EE6918009D16D8 /* KeychainItemAccessibility.swift in Sources */,
 				10377D6823EA321500217D38 /* SceneDelegate.swift in Sources */,
 				10DD1C1223EBF8350086C53E /* KeysController.swift in Sources */,
 				10DD1C1023EBF1D60086C53E /* Crypto.swift in Sources */,

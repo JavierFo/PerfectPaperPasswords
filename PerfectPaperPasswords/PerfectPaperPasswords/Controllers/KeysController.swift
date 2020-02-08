@@ -13,44 +13,30 @@ class KeysController: UIViewController {
     @IBOutlet weak var keylbl: UILabel!
     @IBOutlet weak var passwordGeneratorBttn: UIButton!
     
-    
-    let key = generateKey()
-//   private let dataModel = DataModel()
-//    var passwordArray : [String] = []
+    var newKey = generateKey()
     
     override func viewDidLoad() {
- 
-        
-        keylbl.text = stringKey(key)
-//        dataModel.delegate = self
-//        dataModel.requestData(with: key)
+        keylbl.text = stringKey(newKey)
     }
     
     @IBAction func newKeyBtn(_ sender: UIButton) {
-        let newKey = generateKey()
+        newKey = generateKey()
         keylbl.text = stringKey(newKey)
     }
     
     @IBAction func createCards(_ sender: UIButton) {
-       // performSegue(withIdentifier: "PasswordSegue", sender: passwordGeneratorBttn)
+        //let usingNewKey = newKey
+        performSegue(withIdentifier: "PasswordSegue", sender: passwordGeneratorBttn)
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier ==  "PasswordSegue"{
+            let sendingKey = segue.destination as! CardsController
+            sendingKey.mainKey = newKey
+        }
+    }
+    
 }
-
-//extension KeysController: DataModelDelegate{
-//
-//    func didRecieveDataUpdate(data: [String]) {
-//
-//        passwordArray = data
-//
-//    }
-//
-////    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-////        if segue.identifier ==  "PasswordSegue"{
-////            let passwordsWillBeSentto = segue.destination as! CardsController
-////            passwordsWillBeSentto.passwordsWillBePrinted = passwordArray
-////        }
-////    }
-//
-//}
 
 

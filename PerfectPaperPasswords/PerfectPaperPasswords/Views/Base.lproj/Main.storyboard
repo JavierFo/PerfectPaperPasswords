@@ -41,7 +41,6 @@
                                 <state key="normal" title="Generate Cards"/>
                                 <connections>
                                     <action selector="createCards:" destination="yJ3-Vi-pye" eventType="touchUpInside" id="emG-fi-UVe"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="PasswordSegue" id="IeM-sk-ufN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSu-DI-BHc">
@@ -81,6 +80,7 @@
                     <connections>
                         <outlet property="keylbl" destination="CSu-DI-BHc" id="0pa-qV-i4b"/>
                         <outlet property="passwordGeneratorBttn" destination="ffj-hn-Zl3" id="CeV-hg-hK1"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="PasswordSegue" id="9He-WS-LFD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Err-jJ-Vwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

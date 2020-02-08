@@ -15,20 +15,21 @@ class CardsController : UIViewController {
     //var passwordsWillBePrinted : [String]!
     
     private let dataModel = DataModel()
-    let key = generateKey()
+    var mainKey : SymmetricKey? = nil
     var passwordArray : [[String]]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dataModel.delegate = self
-        dataModel.requestData(with: key)
+        dataModel.requestData(with: mainKey!)
+        //print("\n\n\nMain Key: \(stringKey(mainKey!))\n\n\n")
     }
 }
 
 extension CardsController: DataModelDelegate{
     func didRecieveDataUpdate(data: [[String]]) {
         passwordArray = data
-        print(passwordArray ?? 0)
+        //print(passwordArray ?? 0)
     }
     
 }
