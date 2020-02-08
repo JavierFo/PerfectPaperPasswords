@@ -42,20 +42,27 @@ func getNumberOfCipheredCounter (_ counter: UInt128, using key: SymmetricKey) ->
     
     return cypheredCounterJoinedNumber
 }
+
+func adaptCharacterSetForPasswords(characters set: String) -> [String]{
     
- func getLettersForPassword(key: SymmetricKey) -> String {
-    var password = ""
-    var counter: UInt128 = 0
-    let defaultCharacters = "!#%+23456789:=?@ABCDEFGHJKLMNPRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
-    var characterSet : [String] = [""]
-    
-    let values = defaultCharacters.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "")
+    var charactersToAdapt : [String] = [""]
+    let values = set.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "")
     
     if values != "" {
-        characterSet = Array(Set(values)).map({String($0)}).sorted()
+        charactersToAdapt = Array(Set(values)).map({String($0)}).sorted()
     }
     
-    for _ in 0..<4 {
+    return charactersToAdapt
+}
+    
+func getLettersForPassword(withKey key: SymmetricKey, characters set: String, passwordlenght lenght: Int) -> String {
+    var password = ""
+    var counter: UInt128 = 0
+    //let defaultCharacters = "!#%+23456789:=?@ABCDEFGHJKLMNPRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
+    
+    let characterSet = adaptCharacterSetForPasswords(characters: set)
+    
+    for _ in 0..<lenght {
         let cipheredCounter = getNumberOfCipheredCounter(counter, using: key) ?? UInt128()
         counter += 1
         

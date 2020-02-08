@@ -17,14 +17,14 @@ class DataModel {
     
       weak var delegate: DataModelDelegate?
     
-      func requestData(with key: SymmetricKey) {
+      func requestData(with key: SymmetricKey, characters set: String, passwordlenght lenght: Int) {
         
-        let data = PasswordsCollector(with: key)
+        let data = PasswordsCollector(with: key, characters: set, passwordlenght: lenght)
          delegate?.didRecieveDataUpdate(data: data)
       }
 }
 
-func PasswordsCollector(with key: SymmetricKey) -> [[String]] {
+func PasswordsCollector(with key: SymmetricKey, characters set: String, passwordlenght lenght: Int) -> [[String]] {
     
     var celda = [[String]]()
     
@@ -34,7 +34,7 @@ func PasswordsCollector(with key: SymmetricKey) -> [[String]] {
         var column = [String]()
         
         for _ in 1 ... 7{
-            let cell = getLettersForPassword(key: key)
+            let cell = getLettersForPassword(withKey: key, characters: set, passwordlenght: lenght)
             column.append(cell)
         }
         

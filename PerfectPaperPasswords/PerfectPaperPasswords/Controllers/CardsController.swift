@@ -19,12 +19,17 @@ class CardsController : UIViewController {
     private let keyChainPasswordArrayKey = "passwordArrayKey"
     
     var mainKey : SymmetricKey? = nil
+    var characterSet : String?
+    var passwordLenght : Int?
     var passwordArray : [[String]]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dataModel.delegate = self
-        dataModel.requestData(with: mainKey!)
+        
+        guard let mainKey_ = mainKey, let characters_ = characterSet, let passwordlenght_ = passwordLenght else { return }
+        dataModel.requestData(with: mainKey_, characters: characters_, passwordlenght: passwordlenght_)
+        
         //print("\n\n\nMain Key: \(stringKey(mainKey!))\n\n\n")
     }
     
@@ -76,6 +81,12 @@ extension CardsController: UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PasswordViewCell", for: indexPath) as? PasswordViewCell else { fatalError("Unable to dequeue Password View Cell")}
+        
+        if let passwordlenght = passwordLenght {
+            if passwordlenght > 4 {
+                cell.passwordLabel.font = UIFont.systemFont(ofSize: 8.0)
+            }
+        }
         
         cell.backgroundColor = UIColor.clear
         cell.layer.borderColor = UIColor.black.cgColor

@@ -10,10 +10,10 @@ import UIKit
 
 struct PasswordsModel {
     
-    let passcodeLength: Int
-    let characterSet: [String]
+    var passcodeLength: Int
+    var characterSet: String
     
-    init(passcodeLength: Int, characterSet: [String]){
+    init(passcodeLength: Int, characterSet: String){
         self.passcodeLength = passcodeLength
         self.characterSet = characterSet
     }
