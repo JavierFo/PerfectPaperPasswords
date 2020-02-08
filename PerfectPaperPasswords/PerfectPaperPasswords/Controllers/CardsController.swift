@@ -14,42 +14,69 @@ class CardsController : UIViewController {
     @IBOutlet weak var cardsCollection: UICollectionView!
     //var passwordsWillBePrinted : [String]!
     
+    @IBOutlet weak var keyLabel: UILabel!
+    
     private let dataModel = DataModel()
     private let keyChainSequenceKey = "sequenceKeyKey"
     private let keyChainPasswordArrayKey = "passwordArrayKey"
     
     var mainKey : SymmetricKey? = nil
+    var stringMainKey : String?
     var characterSet : String?
     var passwordLenght : Int?
     var passwordArray : [[String]]?
+    var storedPasswordArray : String?
+    var passwordThatWasStored : [[String]]?
+    var passwordsState: SavedPasswords?
+    
+    var finalPasswordToBePrinted : [[String]]?
+        
+    override func viewWillAppear(_ animated: Bool) {
+        let state = passwordsState
+        
+        if state == .savingPasswords{
+            keyLabel.text = stringMainKey
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dataModel.delegate = self
         
+        if let passwordStoredInKeyChain = storedPasswordArray{
+            passwordThatWasStored = passwordsStringToArray(stringToConvert: passwordStoredInKeyChain)
+        }
+        
         guard let mainKey_ = mainKey, let characters_ = characterSet, let passwordlenght_ = passwordLenght else { return }
         dataModel.requestData(with: mainKey_, characters: characters_, passwordlenght: passwordlenght_)
         
-        //print("\n\n\nMain Key: \(stringKey(mainKey!))\n\n\n")
+        let state = passwordsState
+        
+        if state == .newPasswords {
+            keyLabel.text = stringKey(mainKey_)
+        }
+        
+        if state == .savingPasswords{
+            keyLabel.text = stringMainKey
+        }
+        
     }
     
     @IBAction func saveButton(_ sender: UIBarButtonItem) {
+        
         if let savedMainKey = stringKey(mainKey!){
             KeychainWrapper.standard.set(savedMainKey, forKey: keyChainSequenceKey)
-            //print(savedMainKey)
         }
         
         if let PasswordsArray = passwordArray {
             let passwordStringToSaveInKeyChain = passwordsArrayToString(arrayToParse: PasswordsArray)
             KeychainWrapper.standard.set(passwordStringToSaveInKeyChain, forKey: keyChainPasswordArrayKey)
-            //print(passwordStringToSaveInKeyChain)
         }
-        
+
     }
     
     func passwordsArrayToString(arrayToParse array: [[String]]) -> String {
         var sendingArrayEncoded : String = ""
-        //arrayParsed = Array(array.joined()).joined()
         let jsonEncoder = JSONEncoder()
         if let jsonData = try? jsonEncoder.encode(array) {
         
@@ -59,12 +86,27 @@ class CardsController : UIViewController {
         }
         return sendingArrayEncoded
     }
+    
+    func passwordsStringToArray(stringToConvert string: String) -> [[String]] {
+        var gettingDecodedString : [[String]] = [[]]
+        
+        let data = Data(string.utf8)
+        
+        do {
+            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String]] {
+                gettingDecodedString = json
+            }
+        } catch let error as NSError {
+            print("Failed to load: \(error.localizedDescription)")
+        }
+        
+        return gettingDecodedString
+    }
 }
 
 extension CardsController: DataModelDelegate{
     func didRecieveDataUpdate(data: [[String]]) {
         passwordArray = data
-        //print(passwordArray ?? 0)
     }
     
 }
@@ -88,11 +130,19 @@ extension CardsController: UICollectionViewDelegate, UICollectionViewDataSource,
             }
         }
         
+        let state = passwordsState
+        
+        if state == .newPasswords {
+            finalPasswordToBePrinted = passwordArray
+        }else if state == .savingPasswords{
+            finalPasswordToBePrinted = passwordThatWasStored
+        }
+                
         cell.backgroundColor = UIColor.clear
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 5
-        cell.passwordLabel.text = passwordArray?[indexPath.section][indexPath.item]
+        cell.passwordLabel.text = finalPasswordToBePrinted?[indexPath.section][indexPath.item]
         
         return cell
     }

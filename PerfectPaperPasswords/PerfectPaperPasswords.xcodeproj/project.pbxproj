@@ -15,12 +15,13 @@
 		10377D6F23EA321700217D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10377D6E23EA321700217D38 /* Assets.xcassets */; };
 		10377D7223EA321700217D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10377D7023EA321700217D38 /* LaunchScreen.storyboard */; };
 		10377D7B23EA365500217D38 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10377D7A23EA365500217D38 /* UInt128.swift */; };
+		1048EE0523EEE41F0053A225 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1048EE0423EEE41F0053A225 /* Alerts.swift */; };
+		1048EE0923EEE49B0053A225 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1048EE0823EEE4310053A225 /* KeychainItemAccessibility.swift */; };
+		1048EE0A23EEE49B0053A225 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1048EE0723EEE4310053A225 /* KeychainWrapper.swift */; };
 		107C858F23EDE7DC00680878 /* PasswordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C858E23EDE7DC00680878 /* PasswordsModel.swift */; };
 		10DD1C1023EBF1D60086C53E /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1C0F23EBF1D50086C53E /* Crypto.swift */; };
 		10DD1C1223EBF8350086C53E /* KeysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1C1123EBF8350086C53E /* KeysController.swift */; };
 		10DD1C1423EBFF050086C53E /* PasswordsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DD1C1323EBFF050086C53E /* PasswordsGenerator.swift */; };
-		10E2C34523EE6918009D16D8 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E2C34323EE6918009D16D8 /* KeychainItemAccessibility.swift */; };
-		10E2C34623EE6918009D16D8 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E2C34423EE6918009D16D8 /* KeychainWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +35,13 @@
 		10377D7123EA321700217D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10377D7323EA321700217D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10377D7A23EA365500217D38 /* UInt128.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInt128.swift; sourceTree = "<group>"; };
+		1048EE0423EEE41F0053A225 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		1048EE0723EEE4310053A225 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		1048EE0823EEE4310053A225 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		107C858E23EDE7DC00680878 /* PasswordsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsModel.swift; sourceTree = "<group>"; };
 		10DD1C0F23EBF1D50086C53E /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		10DD1C1123EBF8350086C53E /* KeysController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		10DD1C1323EBFF050086C53E /* PasswordsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsGenerator.swift; sourceTree = "<group>"; };
-		10E2C34323EE6918009D16D8 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = "../../../../../Downloads/PaperPasswords:zippi/PPP-Crypto-Proyect/Utils/KeychainWrapper/KeychainItemAccessibility.swift"; sourceTree = "<group>"; };
-		10E2C34423EE6918009D16D8 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = "../../../../../Downloads/PaperPasswords:zippi/PPP-Crypto-Proyect/Utils/KeychainWrapper/KeychainWrapper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,6 @@
 		10DD1C0B23EBDE070086C53E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				10DD1C0F23EBF1D50086C53E /* Crypto.swift */,
 				10DD1C1323EBFF050086C53E /* PasswordsGenerator.swift */,
 				107C858E23EDE7DC00680878 /* PasswordsModel.swift */,
 			);
@@ -116,9 +117,11 @@
 		10DD1C0E23EBDE240086C53E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				10DD1C0F23EBF1D50086C53E /* Crypto.swift */,
+				1048EE0423EEE41F0053A225 /* Alerts.swift */,
 				10377D7A23EA365500217D38 /* UInt128.swift */,
-				10E2C34323EE6918009D16D8 /* KeychainItemAccessibility.swift */,
-				10E2C34423EE6918009D16D8 /* KeychainWrapper.swift */,
+				1048EE0823EEE4310053A225 /* KeychainItemAccessibility.swift */,
+				1048EE0723EEE4310053A225 /* KeychainWrapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -197,14 +200,15 @@
 				10DD1C1423EBFF050086C53E /* PasswordsGenerator.swift in Sources */,
 				10377D6A23EA321500217D38 /* CardsController.swift in Sources */,
 				10377D6623EA321500217D38 /* AppDelegate.swift in Sources */,
-				10E2C34623EE6918009D16D8 /* KeychainWrapper.swift in Sources */,
-				10E2C34523EE6918009D16D8 /* KeychainItemAccessibility.swift in Sources */,
 				10377D6823EA321500217D38 /* SceneDelegate.swift in Sources */,
 				10DD1C1223EBF8350086C53E /* KeysController.swift in Sources */,
 				10DD1C1023EBF1D60086C53E /* Crypto.swift in Sources */,
 				107C858F23EDE7DC00680878 /* PasswordsModel.swift in Sources */,
 				10377D7B23EA365500217D38 /* UInt128.swift in Sources */,
+				1048EE0523EEE41F0053A225 /* Alerts.swift in Sources */,
+				1048EE0A23EEE49B0053A225 /* KeychainWrapper.swift in Sources */,
 				10178F2523ED32DD0059AA0B /* PasswordViewCell.swift in Sources */,
+				1048EE0923EEE49B0053A225 /* KeychainItemAccessibility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

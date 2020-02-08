@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum SavedPasswords {
+    case savingPasswords
+    case newPasswords
+}
+
 struct PasswordsModel {
     
     var passcodeLength: Int

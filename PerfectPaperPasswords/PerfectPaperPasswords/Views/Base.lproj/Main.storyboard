@@ -98,11 +98,19 @@
                                     <action selector="changePasswordLenght:" destination="yJ3-Vi-pye" eventType="valueChanged" id="wmL-XS-hRV"/>
                                 </connections>
                             </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYR-Vq-YSH">
+                                <rect key="frame" x="20" y="699" width="374" height="50"/>
+                                <state key="normal" title="SavedCards"/>
+                                <connections>
+                                    <action selector="SaveCards:" destination="yJ3-Vi-pye" eventType="touchUpInside" id="gsW-3O-sNr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="fD0-87-NTY" firstAttribute="centerY" secondItem="1jh-G0-ddY" secondAttribute="centerY" id="0zp-5D-AOk"/>
                             <constraint firstItem="Y32-h1-yLL" firstAttribute="top" secondItem="JPX-31-7h5" secondAttribute="bottom" constant="8" id="1vf-nE-Itg"/>
+                            <constraint firstItem="OYR-Vq-YSH" firstAttribute="centerX" secondItem="Y32-h1-yLL" secondAttribute="centerX" id="3pI-Yb-jXy"/>
                             <constraint firstItem="ffj-hn-Zl3" firstAttribute="top" secondItem="Y32-h1-yLL" secondAttribute="bottom" constant="8" id="72x-cH-p6D"/>
                             <constraint firstItem="lEl-GF-uOw" firstAttribute="top" secondItem="CSu-DI-BHc" secondAttribute="bottom" constant="8" id="9d9-7F-dq4"/>
                             <constraint firstItem="lEl-GF-uOw" firstAttribute="leading" secondItem="csU-em-Ees" secondAttribute="leading" id="AX2-Us-uLi"/>
@@ -113,6 +121,7 @@
                             <constraint firstItem="CSu-DI-BHc" firstAttribute="top" secondItem="IuP-ku-CNY" secondAttribute="top" id="Gla-FI-3v2"/>
                             <constraint firstItem="JPX-31-7h5" firstAttribute="top" secondItem="fD0-87-NTY" secondAttribute="bottom" constant="8" id="GzG-RV-EhG"/>
                             <constraint firstItem="IuP-ku-CNY" firstAttribute="bottom" secondItem="ffj-hn-Zl3" secondAttribute="bottom" constant="171" id="HzZ-mS-0pJ"/>
+                            <constraint firstItem="OYR-Vq-YSH" firstAttribute="leading" secondItem="IuP-ku-CNY" secondAttribute="leading" constant="138" id="Khx-ZU-DiU"/>
                             <constraint firstItem="CSu-DI-BHc" firstAttribute="leading" secondItem="lEl-GF-uOw" secondAttribute="leading" id="M2B-Ia-6XA"/>
                             <constraint firstItem="csU-em-Ees" firstAttribute="trailing" secondItem="qsf-Jf-Y5n" secondAttribute="trailing" id="QUX-8Y-7ad"/>
                             <constraint firstItem="fD0-87-NTY" firstAttribute="top" secondItem="qsf-Jf-Y5n" secondAttribute="bottom" constant="8" id="RAZ-uH-bW2"/>
@@ -120,8 +129,10 @@
                             <constraint firstItem="lEl-GF-uOw" firstAttribute="trailing" secondItem="csU-em-Ees" secondAttribute="trailing" id="Ufd-MY-J6H"/>
                             <constraint firstItem="qsf-Jf-Y5n" firstAttribute="trailing" secondItem="fD0-87-NTY" secondAttribute="trailing" id="VqL-pf-TDy"/>
                             <constraint firstItem="JPX-31-7h5" firstAttribute="trailing" secondItem="ffj-hn-Zl3" secondAttribute="trailing" id="X2l-Bd-47e"/>
+                            <constraint firstItem="IuP-ku-CNY" firstAttribute="bottom" secondItem="OYR-Vq-YSH" secondAttribute="bottom" constant="113" id="YSH-OI-6Aq"/>
                             <constraint firstItem="JPX-31-7h5" firstAttribute="centerX" secondItem="Y32-h1-yLL" secondAttribute="centerX" id="YTT-ZS-hT6"/>
                             <constraint firstItem="CSu-DI-BHc" firstAttribute="trailing" secondItem="1jh-G0-ddY" secondAttribute="trailingMargin" id="bwz-YI-KO2"/>
+                            <constraint firstItem="OYR-Vq-YSH" firstAttribute="top" secondItem="ffj-hn-Zl3" secondAttribute="bottom" constant="8" id="eIN-3W-LIE"/>
                             <constraint firstItem="csU-em-Ees" firstAttribute="leading" secondItem="qsf-Jf-Y5n" secondAttribute="leading" id="gjC-QJ-2gd"/>
                             <constraint firstItem="JPX-31-7h5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ffj-hn-Zl3" secondAttribute="leading" id="okC-8R-sja"/>
                             <constraint firstItem="CSu-DI-BHc" firstAttribute="leading" secondItem="1jh-G0-ddY" secondAttribute="leadingMargin" id="r5L-bw-3fK"/>
@@ -137,23 +148,25 @@
                         <outlet property="passwordGeneratorBttn" destination="ffj-hn-Zl3" id="CeV-hg-hK1"/>
                         <outlet property="passwordLenghtStepper" destination="Y32-h1-yLL" id="rLq-fM-Cdq"/>
                         <outlet property="passwordlenghtLabel" destination="JPX-31-7h5" id="QTU-KS-prR"/>
+                        <outlet property="savedCards" destination="OYR-Vq-YSH" id="3lG-D4-wbq"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="PasswordSegue" id="9He-WS-LFD"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SavedCards" id="4la-3D-sOj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Err-jJ-Vwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4.3478260869565224" y="65.625"/>
         </scene>
-        <!--Passwords-->
+        <!--CardsController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CardsController" customModule="PerfectPaperPasswords" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardsController" title="CardsController" id="BYZ-38-t0r" customClass="CardsController" customModule="PerfectPaperPasswords" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kf1-dK-qrh">
-                                <rect key="frame" x="20" y="88" width="374" height="720"/>
+                                <rect key="frame" x="20" y="149" width="374" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iaD-A2-fJn">
                                     <size key="itemSize" width="73" height="72"/>
@@ -169,7 +182,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="73" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123456" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juT-vq-1aH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123456" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juT-vq-1aH">
                                                     <rect key="frame" x="0.0" y="0.0" width="73" height="72"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -194,19 +207,31 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="IxR-7K-GB9"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="key" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pF6-8y-Qk1">
+                                <rect key="frame" x="20" y="88" width="374" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="yWM-zP-IeE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="kf1-dK-qrh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="32p-dt-6Zb"/>
-                            <constraint firstItem="kf1-dK-qrh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BcB-a4-MbD"/>
-                            <constraint firstItem="kf1-dK-qrh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hbt-nS-rJO"/>
-                            <constraint firstItem="kf1-dK-qrh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="RAG-0a-5CC"/>
+                            <constraint firstItem="pF6-8y-Qk1" firstAttribute="leading" secondItem="kf1-dK-qrh" secondAttribute="leading" id="0I4-Qn-mvf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kf1-dK-qrh" secondAttribute="bottom" constant="54" id="6sg-rl-BMV"/>
+                            <constraint firstItem="kf1-dK-qrh" firstAttribute="top" secondItem="pF6-8y-Qk1" secondAttribute="bottom" constant="8" id="Le2-Au-Bwo"/>
+                            <constraint firstItem="pF6-8y-Qk1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XaG-O3-uhi"/>
+                            <constraint firstItem="pF6-8y-Qk1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="acv-dQ-W5K"/>
+                            <constraint firstItem="pF6-8y-Qk1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wUS-xX-4ko"/>
+                            <constraint firstItem="pF6-8y-Qk1" firstAttribute="trailing" secondItem="kf1-dK-qrh" secondAttribute="trailing" id="xIg-oe-1pO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Passwords" id="PJu-BI-W6E">
                         <barButtonItem key="backBarButtonItem" id="Und-mi-ihg"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="bG3-v6-uZx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bG3-v6-uZx">
                             <connections>
                                 <action selector="saveButton:" destination="BYZ-38-t0r" id="kWD-k3-xAd"/>
                             </connections>
@@ -214,6 +239,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cardsCollection" destination="kf1-dK-qrh" id="GtZ-On-kzK"/>
+                        <outlet property="keyLabel" destination="pF6-8y-Qk1" id="YRB-1P-3aq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -221,4 +247,7 @@
             <point key="canvasLocation" x="853.62318840579712" y="65.625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4la-3D-sOj"/>
+    </inferredMetricsTieBreakers>
 </document>

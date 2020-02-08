@@ -57,9 +57,7 @@ func adaptCharacterSetForPasswords(characters set: String) -> [String]{
     
 func getLettersForPassword(withKey key: SymmetricKey, characters set: String, passwordlenght lenght: Int) -> String {
     var password = ""
-    var counter: UInt128 = 0
-    //let defaultCharacters = "!#%+23456789:=?@ABCDEFGHJKLMNPRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
-    
+    var counter: UInt128 = 0    
     let characterSet = adaptCharacterSetForPasswords(characters: set)
     
     for _ in 0..<lenght {
