@@ -15,6 +15,9 @@ class CardsController : UIViewController {
     //var passwordsWillBePrinted : [String]!
     
     private let dataModel = DataModel()
+    private let keyChainSequenceKey = "sequenceKeyKey"
+    private let keyChainPasswordArrayKey = "passwordArrayKey"
+    
     var mainKey : SymmetricKey? = nil
     var passwordArray : [[String]]?
     
@@ -23,6 +26,33 @@ class CardsController : UIViewController {
         dataModel.delegate = self
         dataModel.requestData(with: mainKey!)
         //print("\n\n\nMain Key: \(stringKey(mainKey!))\n\n\n")
+    }
+    
+    @IBAction func saveButton(_ sender: UIBarButtonItem) {
+        if let savedMainKey = stringKey(mainKey!){
+            KeychainWrapper.standard.set(savedMainKey, forKey: keyChainSequenceKey)
+            //print(savedMainKey)
+        }
+        
+        if let PasswordsArray = passwordArray {
+            let passwordStringToSaveInKeyChain = passwordsArrayToString(arrayToParse: PasswordsArray)
+            KeychainWrapper.standard.set(passwordStringToSaveInKeyChain, forKey: keyChainPasswordArrayKey)
+            //print(passwordStringToSaveInKeyChain)
+        }
+        
+    }
+    
+    func passwordsArrayToString(arrayToParse array: [[String]]) -> String {
+        var sendingArrayEncoded : String = ""
+        //arrayParsed = Array(array.joined()).joined()
+        let jsonEncoder = JSONEncoder()
+        if let jsonData = try? jsonEncoder.encode(array) {
+        
+            if let arrayEncoded = String(data: jsonData, encoding: .utf8){
+                sendingArrayEncoded = arrayEncoded
+            }
+        }
+        return sendingArrayEncoded
     }
 }
 

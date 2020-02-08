@@ -10,10 +10,4 @@ import UIKit
 
 class PasswordViewCell: UICollectionViewCell {
     @IBOutlet var passwordLabel: UILabel!
-    
-    func update(with password: String?) {
-        if let password = password{
-            passwordLabel.text = password
-        }
-    }
 }

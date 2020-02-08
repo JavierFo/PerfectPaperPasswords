@@ -87,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="-4.3478260869565224" y="65.625"/>
         </scene>
-        <!--Cards Controller-->
+        <!--Passwords-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CardsController" customModule="PerfectPaperPasswords" customModuleProvider="target" sceneMemberID="viewController">
@@ -147,7 +147,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PJu-BI-W6E"/>
+                    <navigationItem key="navigationItem" title="Passwords" id="PJu-BI-W6E">
+                        <barButtonItem key="backBarButtonItem" id="Und-mi-ihg"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="bG3-v6-uZx">
+                            <connections>
+                                <action selector="saveButton:" destination="BYZ-38-t0r" id="kWD-k3-xAd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cardsCollection" destination="kf1-dK-qrh" id="GtZ-On-kzK"/>
                     </connections>
