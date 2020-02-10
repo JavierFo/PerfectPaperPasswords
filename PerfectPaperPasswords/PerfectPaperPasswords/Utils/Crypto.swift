@@ -29,8 +29,7 @@ func bit128counter (_ value: UInt128) -> Data {
 }
 
 func getNumberOfCipheredCounter (_ counter: UInt128, using key: SymmetricKey) -> UInt128? {
-    //let counter: UInt128 = 0
-    //let key = generateKey()
+
     let counterThatWillBeCiphered = bit128counter(counter)
     
     guard let cypheredCounter = try? AES.GCM.seal(counterThatWillBeCiphered, using: key) else {

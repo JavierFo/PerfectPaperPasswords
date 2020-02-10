@@ -64,8 +64,11 @@ class CardsController : UIViewController {
     
     @IBAction func saveButton(_ sender: UIBarButtonItem) {
         
-        if let savedMainKey = stringKey(mainKey!){
-            KeychainWrapper.standard.set(savedMainKey, forKey: keyChainSequenceKey)
+        if let mainKey_ = mainKey{
+        
+            if let savedMainKey = stringKey(mainKey_){
+                KeychainWrapper.standard.set(savedMainKey, forKey: keyChainSequenceKey)
+            }
         }
         
         if let PasswordsArray = passwordArray {
