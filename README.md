@@ -17,7 +17,7 @@ Password Cards con Algoritmo de Encripción
   - Alfabeto. Se puede utilizar el alfabeto sugerido o cambiarlo por alguno personalizado, con el que se caracterizaran las contrasenas. 
   - Numero de caracteres. Numero de letras del que se compondrá cada contraseña. 
 
-6. Presionar boton 'Generate cartas' para crear cartas con contrasenas, al presionar boton 'save' se pueden guardar las contraseñas con la llave de 256 que las generó. 
+6. Presionar boton 'Generate cartas' para crear cartas con contrasenas, al presionar boton 'save' se pueden guardar las contraseñas con la llave de 256 bits que las generó. 
 7. Al volver a correr la aplicacion, al presionar el boton 'save Cards' se puede recuperar la carta que se habia guardado previamente. 
 
 
