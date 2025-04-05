@@ -1,24 +1,27 @@
 # PerfectPaperPasswords
-Password Cards con Algoritmo de Encripción
+Password Cards with Encryption Algorithm
 
-## Implementación 
+![passwords-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/76ac8799-0439-4861-82e9-94b663da7d20)
 
-**En el actual repositorio se incluye una implementacion de contraseñas visuales para una app de iOS 13 elaborada con Swift 5.** 
+
+## Implementation 
+
+**The current repository includes a visual password implementation for an iOS 13 app built with Swift 5.** 
 
 ## Instalacion 
 
-1. Clonar el siguiente repositorio de GitHub: https://github.com/JavierFo/PerfectPaperPasswords.git
-2. En el repositorio local, abrir PerfectPaperPasswords.xcodeproj usando Xcode 11. 
-3. Dentro de Xcode 11, presionar boton 'Build' ubicado en la esquina superior izquierda. 
-4. Correr la aplicacion usando el simulador de Xcode o un dispositivo iOS 13 o una version mayor. 
-5. Dentro de la aplicacion, modificar los parametros con los cuales se generarán las cartas, los cuales son: 
+1. Clone the following GitHub repository: https://github.com/JavierFo/PerfectPaperPasswords.git
+2. In the local repository, open PerfectPaperPasswords.xcodeproj using Xcode 11.
+3. Within Xcode 11, press the 'Build' button located in the upper left corner.
+4. Run the application using the Xcode simulator or an iOS 13 or higher device.
+5. Within the application, modify the parameters with which the letters will be generated, which are:
 
-  - Llave. Al persionar boton 'Make New Key' se genera una nueva llave de 256 bits. 
-  - Alfabeto. Se puede utilizar el alfabeto sugerido o cambiarlo por alguno personalizado, con el que se caracterizaran las contrasenas. 
-  - Numero de caracteres. Numero de letras del que se compondrá cada contraseña. 
+- Key. Pressing the 'Make New Key' button generates a new 256-bit key.
+- Alphabet. You can use the suggested alphabet or change it to a custom one, which will characterize the passwords.
+- Number of characters. Number of letters that each password will be composed of.
 
-6. Presionar boton 'Generate cartas' para crear cartas con contrasenas, al presionar boton 'save' se pueden guardar las contraseñas con la llave de 256 bits que las generó. 
-7. Al volver a correr la aplicacion, al presionar el boton 'save Cards' se puede recuperar la carta que se habia guardado previamente. 
+6. Press the 'Generate Cards' button to create cards with passwords. Pressing the 'Save' button will save the passwords with the 256-bit key that generated them.
+7. When you run the application again, press the 'Save Cards' button to retrieve the previously saved card.
 
 
 
